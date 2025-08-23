@@ -1,0 +1,105 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            keyframes: {
+              scrolling: {
+                "0%": { transform: "translateX(0)" },
+                "100%": { transform: "translateX(-50%)" },
+              },
+            },
+            animation: {
+              scrolling: "scrolling 12s linear infinite",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="mt-[110px] flex ml-[60px] gap-6">
+      <main class="flex-[2]">
+        <!-- cool vibes-->
+        <div class="relative inline-block">
+          <span
+            class="inline-block bg-blue-600 text-white py-1 px-3 relative rounded-lg transform -rotate-3 origin-bottom skew-x-2 shadow-md font-medium text-sm"
+            >Cool vibes</span
+          >
+          <img
+            src="SparkIMG/power_15147047 1.png"
+            alt="icon"
+            class="absolute -top-2 -left-2 h-6 w-6 animate-[float_3s_ease-in-out_infinite]"
+          />
+        </div>
+
+        <!-- main text -->
+        <h5 class="ml-6 text-base mt-3 font-normal">
+          Find Your Match One Spark at a Time
+        </h5>
+
+        <h3 class="text-4xl ml-5 font-semibold mt-3">
+          Dating, The Way It <br />
+          Should Feel Safe
+        </h3>
+
+        <p class="ml-6 text-base mt-3 font-normal">
+          Step Into A New World Of Dating Where Your Experience Is Personalized,
+          Protected, And Pressure-Free. From Light Chats To Lasting
+          Connections-You're in Control.
+        </p>
+
+        <!-- soul mates -->
+        <div class="relative inline-block ml-[300px] mt-3">
+          <span
+            class="inline-block bg-yellow-600 text-white py-1 px-3 relative rounded-lg transform rotate-6 origin-bottom skew-x-5 shadow-md font-medium text-sm"
+            >Soul mates</span
+          >
+          <img
+            src="SparkIMG/love_15736504 1.png"
+            alt=""
+            class="absolute -bottom-2 -left-2 h-6 w-6 animate-[float_3s_ease-in-out_infinite]"
+          />
+        </div>
+
+        <div class="relative inline-block ml-6 xl:block w-fit mt-3">
+          <span class="bg-[#69306D] py-2 px-2 text-white relative rounded-lg"
+            >Find your Match
+          </span>
+          <img
+            src="SparkIMG/cursor_7420962 1.png"
+            alt=""
+            class="absolute -bottom-4 -right-3 h-6 w-6 animate-[float_3s_ease-in-out_infinite]"
+          />
+        </div>
+      </main>
+
+      <div class="flex-[3] flex overflow-hidden relative h-[520px]">
+        <div class="flex gap-2 animate-scrolling absolute left-0 top-0 w-max">
+          <img src="SparkIMG/Frame 10.png" alt="" class="" />
+          <div class="flex flex-col gap-2 w-52">
+            <img src="SparkIMG/Rectangle 4.png" alt="" class="w-[380px]" />
+            <img src="SparkIMG/Rectangle 2.png" alt="" class="h-[347px] w-[380px]" />
+          </div>
+          <img src="SparkIMG/Rectangle 3.png" alt="" class="" />
+          <!-- Duplicate for seamless loop -->
+          <img src="SparkIMG/Frame 10.png" alt="" class="" />
+          <div class="flex flex-col gap-2 w-52">
+            <img src="SparkIMG/Rectangle 4.png" alt="" class="w-[380px]" />
+            <img src="SparkIMG/Rectangle 2.png" alt="" class="h-[347px] w-[380px]" />
+          </div>
+          <img src="SparkIMG/Rectangle 3.png" alt="" class="" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // No JS needed for marquee animation; handled by CSS
+    </script>
+  </body>
+</html>

@@ -4,6 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            keyframes: {
+              scrolling: {
+                "0%": { transform: "translateX(0)" },
+                "100%": { transform: "translateX(-50%)" },
+              },
+            },
+            animation: {
+              scrolling: "scrolling 15s linear infinite",
+            },
+          },
+        },
+      };
+    </script>
     <link rel="stylesheet" href="style.css" />
 
     <title>SPARK</title>
@@ -81,7 +98,7 @@
 
         <h3 class="text-4xl ml-5 font-semibold mt-3">
           Dating, The Way It <br />
-          Should Feel Safe
+          Should Feel <span class="word text-purple-900" id="changing-span">Safe</span>
         </h3>
 
         <p class="ml-6 text-base mt-3 font-normal">
@@ -115,17 +132,35 @@
         </div>
       </main>
 
-      <div class="flex-[3] overflowhidden">
-        <marquee behavior="" direction="">
-          <div class="flex gap-2">
-            <img src="SparkIMG/Frame 10.png" alt="" class="flex-1" />
-            <div class="flex-1 flex-col gap-2">
-              <img src="SparkIMG/Rectangle 4.png" alt="" class="w-50" />
-              <img src="SparkIMG/Rectangle 2.png" alt="" class="h-[340px]" />
-            </div>
-            <img src="SparkIMG/Rectangle 3.png" alt="" class="flex-1" />
+      <div class="flex-[3] flex overflow-hidden relative h-[520px]">
+        <div
+          id="marquee-content"
+          class="flex gap-2 animate-scrolling absolute left-0 top-0 w-max"
+        >
+          <img
+            src="SparkIMG/Frame 10.png"
+            alt=""
+            class="h-[420px] w-[250px] object-cove  rounded-lg"
+          />
+          <div class="flex flex-col gap-1">
+            <img
+              src="SparkIMG/Rectangle 4.png"
+              alt=""
+              class="h-[100px] w-[270px]"
+            />
+            <img
+              src="SparkIMG/Rectangle 2.png"
+              alt=""
+              class="h-[317px] w-[270px]"
+            />
           </div>
-        </marquee>
+          <img
+            src="SparkIMG/Rectangle 3.png"
+            alt=""
+            class="h-[420px] w-[250px] object-cover rounded-lg"
+          />
+          <!-- Add more unique images as needed -->
+        </div>
       </div>
     </div>
 
@@ -410,20 +445,24 @@
         <div>
           <h2 class="font-semibold text-xl">Frequently Asked Question</h2>
           <p class="mt-2 font-light">
-            Got Questions? Weve Got Answers. Everything you need to <br> know about
-            the product. Cant find what youre looking for?<br>
+            Got Questions? Weve Got Answers. Everything you need to <br />
+            know about the product. Cant find what youre looking for?<br />
             <span class="text-purple-900 font-semibold">Contact us</span>
           </p>
           <div class="flex mt-16">
-            <img
-              src="SparkIMG/WhatsApp Image 2025-07-24 at 19.00.13_2d27e3fa 1.png"
-              alt=""
-            />
-            <img src="SparkIMG/Spark (3) 1.png" alt="" />
+            <div class="mt-20">
+              <img
+                src="SparkIMG/WhatsApp Image 2025-07-24 at 19.00.13_2d27e3fa 1.png"
+                alt=""
+              />
+            </div>
+            <div class="">
+              <img src="SparkIMG/Spark (3) 1.png" alt="" />
+            </div>
           </div>
         </div>
 
-        <div>
+        <div class="mt-10">
           <div id="faq-container"></div>
         </div>
       </div>
@@ -467,5 +506,12 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      // Duplicate marquee content for seamless loop
+      document.addEventListener("DOMContentLoaded", function () {
+        const marquee = document.getElementById("marquee-content");
+        marquee.innerHTML += marquee.innerHTML;
+      });
+    </script>
   </body>
 </html>
