@@ -29,13 +29,22 @@ const faqs = [
 
 document.addEventListener("DOMContentLoaded", function () {
   const span = document.getElementById("changing-span");
-  const words = ["Warm", "Real"];
+  const words = ["Warm", "Real", "Safe"];
   let i = 0;
+
   setInterval(() => {
-    span.innerHTML = words[i % words.length];
+    // Change word instantly
+    span.textContent = words[i % words.length];
+
+    // Trigger bounce-in
+    span.classList.remove("animate-in");
+    void span.offsetWidth; // force reflow so animation restarts
+    span.classList.add("animate-in");
+
     i++;
   }, 3000);
 });
+
 
 // Duplicate marquee content for seamless loop
 document.addEventListener("DOMContentLoaded", function () {
