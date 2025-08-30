@@ -15,7 +15,7 @@
               },
             },
             animation: {
-              scrolling: "scrolling 30s linear infinite",
+              scrolling: "scrolling 20s linear infinite",
             },
           },
         },
@@ -26,56 +26,63 @@
     <title>SPARK</title>
   </head>
   <body>
+    <!-- Header Section: Logo and Navigation -->
     <header class="w-full h-[76px] shadow bg-white">
-      <div class="flex items-center justify-between px-10 h-full">
-        <!-- Logo -->
-        <img
-          src="SparkIMG/Spark logo temp.png"
-          alt="spark logo"
-          class="w-auto"
-        />
+      <div
+        class="flex items-center justify-between px-10 h-full max-w-[1200px] mx-auto"
+      >
+        <!-- Left: Logo -->
+        <div class="flex-shrink-0">
+          <img
+            src="SparkIMG/Spark logo temp.png"
+            alt="spark logo"
+            class="w-auto"
+          />
+        </div>
 
-        <nav class="flex items-center gap-6">
-          <!-- Navigation Links -->
-          <ul class="flex items-center gap-6">
+        <!-- Center: Nav Links -->
+        <nav class="flex-1">
+          <ul class="flex justify-center items-center gap-6">
             <li>
-              <a href="#" class="text-purple-900 font-semibold hover:underline"
+              <a
+                href="#"
+                class="text-purple-900 font-semibold hover:underline"
+                aria-current="page"
                 >Home</a
               >
             </li>
             <li>
               <a
-                href="#"
-                class="hover:underline font-semibold whitespace-nowrap"
+                href="aboutus.html"
+                class="hover:underline whitespace-nowrap"
                 >About us</a
               >
             </li>
             <li>
-              <a href="#" class="hover:underline font-semibold">Support</a>
-            </li>
-          </ul>
-
-          <!-- login-sign up -->
-          <ul class="flex items-end gap-2 ml-[340px]">
-            <li>
-              <a
-                href="#"
-                class="text-purple-900 font-semibold whitespace-nowrap"
-                >Sign up</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="bg-purple-800 text-white font-semibold px-[56px] py-[10.5px] rounded-lg hover:bg-purple-700"
-                >Login</a
-              >
+              <a href="#" class="hover:underline">Support</a>
             </li>
           </ul>
         </nav>
+
+        <!-- Right: Auth -->
+        <ul class="flex items-center gap-2 flex-shrink-0">
+          <li>
+            <a href="#" class="text-purple-900 font-semibold whitespace-nowrap"
+              >Sign up</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="bg-purple-800 text-white font-semibold px-[56px] py-[10.5px] rounded-lg hover:bg-purple-700"
+              >Login</a
+            >
+          </li>
+        </ul>
       </div>
     </header>
 
+    <!-- Main Hero Section: Intro, cool vibes, main text, soul mates, marquee -->
     <div class="mt-[110px] flex ml-[60px] gap-6">
       <main class="flex-[2]">
         <!-- cool vibes-->
@@ -165,6 +172,7 @@
       </div>
     </div>
 
+    <!-- Features Section: App features and highlights -->
     <section class="flex flex-wrap mt-10 items-center ml-7 p-4">
       <div class="w-full flex justify-center items-center">
         <img src="SparkIMG/tab2.png" alt="" />
@@ -189,6 +197,7 @@
       </div>
     </section>
 
+    <!-- Connection Section: Everything you need to connect -->
     <section class="section3 mt-10 w-full pt-7">
       <h2 class="font-semibold text-2xl max-w-[1200px] mx-auto">
         Everything You Need <br />
@@ -200,7 +209,7 @@
         Right-For The Kind Of Connection That Lasts.
       </p>
 
-      <div class="mt-5 flex gap-1  justify-center  max-w-[1200px] mx-auto">
+      <div class="mt-5 flex gap-1 justify-center max-w-[1200px] mx-auto">
         <div>
           <img
             src="SparkIMG/Rectangle 2 (1).png"
@@ -225,8 +234,12 @@
           </p>
         </div>
         <div class="relative inline-block ml-6 xl:block w-fit">
-          <img src="SparkIMG/Rectangle 7.png" alt="" class="relative"/>
-          <img src="SparkIMG/Spark 2.png" alt="" class="absolute bottom-12 -right-3  animate-[float_3s_ease-in-out_infinite]"/>
+          <img src="SparkIMG/Rectangle 7.png" alt="" class="relative" />
+          <img
+            src="SparkIMG/Spark 2.png"
+            alt=""
+            class="absolute bottom-12 -right-3 animate-[float_3s_ease-in-out_infinite]"
+          />
           <p class="mt-2 font-xs text-sm">
             take your love global with a first-class visa pathway to Canada.
           </p>
@@ -234,6 +247,7 @@
       </div>
     </section>
 
+    <!-- Safety Section: Safety features and info -->
     <section class="mt-20 ml-20 w-auto">
       <h3 class="text-center font-semibold text-4xl">
         Safety First-Without The Vibe Kill
@@ -251,7 +265,7 @@
             Connection, Not Caution.
           </p>
 
-          <div class="flex  gap-2 mt-10">
+          <div class="flex gap-2 mt-10">
             <img src="SparkIMG/search_3281188 1.png" alt="" /><span
               class="mt-3"
             >
@@ -283,6 +297,7 @@
       </div>
     </section>
 
+    <!-- Testimonial Section: Real stories from users -->
     <section class="mt-20 ml-20">
       <div>
         <h3 class="text-2xl font-semibold 2xl:text-center">
@@ -317,13 +332,17 @@
             </div>
           </div>
           <div class="mt-20 w-1/2 xl:mt-36">
-            <img src="SparkIMG/Rectangle 10.png" alt="" class="xl:w-56 rounded" />
+            <img
+              src="SparkIMG/Rectangle 10.png"
+              alt=""
+              class="xl:w-56 rounded"
+            />
           </div>
         </div>
       </div>
     </section>
 
-
+    <!-- Pricing Section: Plans and pricing -->
     <section class="mt-20">
       <div>
         <h3 class="text-center text-2xl font-semibold">
@@ -352,7 +371,7 @@
               <li class="mt-3">Safety prompts and basic filters</li>
               <li class="mt-3">Smart matching based on vibe and intent</li>
             </ul>
-            <div class="mt-10 text-center bg-purple-800 p-2 rounded-md">
+            <div class="mt-10 text-center bg-purple-800 p-2 rounded-md hover:bg-[#520C61]">
               <button class="text-white">Get started</button>
             </div>
           </div>
@@ -374,7 +393,7 @@
               <li class="mt-3">Access to those that liked you</li>
               <li class="mt-3">Daily profile boosts</li>
             </ul>
-            <div class="mt-10 text-center bg-white p-2 rounded-md">
+            <div class="mt-10 text-center bg-white p-2 rounded-md hover:bg-[#520C61] hover:text-white">
               <button class="text-purple-900">Get started</button>
             </div>
           </div>
@@ -394,7 +413,7 @@
               <li class="mt-3">5 super likes daily</li>
               <li class="mt-3">See who likes you</li>
             </ul>
-            <div class="mt-10 text-center bg-purple-800 p-2 rounded-md">
+            <div class="mt-10 text-center bg-purple-800 p-2 rounded-md hover:bg-[#520C61]">
               <button class="text-white">Get started</button>
             </div>
           </div>
@@ -402,6 +421,7 @@
       </div>
     </section>
 
+    <!-- FAQ Section: Frequently Asked Questions -->
     <section>
       <div class="mt-20 flex justify-around">
         <div>
@@ -430,13 +450,19 @@
       </div>
     </section>
 
+    <!-- Footer Section: Links, policies, copyright -->
     <footer class="bg-purple-800 p-10">
       <div class="">
-        <div class="flex justify-between items-start w-full max-w-6xl mx-auto gap-10 text-white">
-            <aside class="flex-[2] w-22 ">
-              <img src="SparkIMG/Spark logo temp.png" alt=""  class="w-full max-w-[250px]"/>
-            </aside>
-          
+        <div
+          class="flex justify-between items-start w-full max-w-6xl mx-auto gap-10 text-white"
+        >
+          <aside class="flex-[2] w-22">
+            <img
+              src="SparkIMG/Spark logo temp.png"
+              alt=""
+              class="w-full max-w-[250px]"
+            />
+          </aside>
 
           <div class="flex flex-[3] gap-5 ml-50">
             <div>
@@ -467,7 +493,7 @@
           </div>
         </div>
       </div>
-      <div  class="text-center mt-20 text-white mb-10">
+      <div class="text-center mt-20 text-white mb-10">
         <span>&copy; SPARK All rights reserved</span>
       </div>
     </footer>
