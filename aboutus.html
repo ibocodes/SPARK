@@ -1,12 +1,12 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
-</head>
-<body>
-        <!-- Header Section: Logo and Navigation -->
+  </head>
+  <body>
+    <!-- Header Section: Logo and Navigation -->
     <header class="w-full h-[76px] shadow bg-white">
       <div
         class="flex items-center justify-between px-10 h-full max-w-[1200px] mx-auto"
@@ -24,17 +24,15 @@
         <nav class="flex-1">
           <ul class="flex justify-center items-center gap-6">
             <li>
-              <a
-                href="#"
-                class="text-purple-900 font-semibold hover:underline"
-                aria-current="page"
+              <a href="index.html" class="text-purple-900 hover:underline"
                 >Home</a
               >
             </li>
             <li>
               <a
                 href="#"
-                class="hover:underline whitespace-nowrap"
+                class="hover:underline font-semibold whitespace-nowrap"
+                aria-current="page"
                 >About us</a
               >
             </li>
@@ -62,31 +60,80 @@
       </div>
     </header>
 
-    <section>
+    <section class="mt-28">
+      <div class="flex max-w-[1200px] mx-auto mt-32 gap-10 items-center">
         <div>
-            
+          <h1 class="text-5xl font-semibold">Contact us</h1>
+          <p class="text-xl font-light mt-2">
+            Looking for clarity, collaboration, or a custom solution?
+            <br />Start the conversation today.
+          </p>
+
+          <div class="flex gap-10 mt-80">
+            <div class="">
+              <h3 class="font-semibold text-xl">Customer support</h3>
+              <p class="font-light text-xl mt-2">
+                Our support team is available round <br />the clock to address
+                any enquires you <br />
+                may have
+              </p>
+            </div>
+
+            <div class="text-xl">
+              <h3 class="font-semibold text-xl">Feedback & Suggestion</h3>
+              <p class="font-light text-xl mt-2">
+                We value your feedback here at Spark<br />and appreciate your
+                contribution to <br />
+                growing the company
+              </p>
+            </div>
+          </div>
         </div>
+
+        <div class="text-xl shadow w-[500px] p-10">
+          <form action="">
+            <label for="" class="text-xl">First name</label><br />
+            <input
+              type="text"
+              placeholder="Enter first name"
+              class="border w-full h-16 rounded-lg mt-2 pl-4"
+            /><br />
+
+            <label for="" class="text-xl">Last name</label><br />
+            <input
+              type="text"
+              placeholder="Enter last name"
+              class="border w-full h-16 rounded-lg mt-2 pl-4"
+            /><br />
+
+            <label for="" class="text-xl">Email</label><br />
+            <input
+              type="text"
+              placeholder="@gmail"
+              class="border w-full h-16 rounded-lg mt-2 pl-4"
+            /><br />
+
+            <label for="" class="text-xl">Description</label><br />
+            <textarea
+              name=""
+              id=""
+              placeholder="State your enquiries here"
+              class="border w-full h-32 rounded-lg mt-2 pl-4"
+            ></textarea>
+
+            <button
+              type="submit"
+              class="bg-purple-700 text-white w-full h-16 mt-6 rounded-lg text-xl font-semibold"
+            >
+              Contact us
+            </button>
+          </form>
+        </div>
+      </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- Footer Section: Links, policies, copyright -->
-    <footer class="bg-purple-800 p-10">
+    <!-- Footer Section: Links, policies, copyright -->
+    <footer class="bg-purple-800 p-10 mt-16">
       <div class="">
         <div
           class="flex justify-between items-start w-full max-w-6xl mx-auto gap-10 text-white"
@@ -132,6 +179,5 @@
         <span>&copy; SPARK All rights reserved</span>
       </div>
     </footer>
-
-</body>
+  </body>
 </html>
