@@ -11,8 +11,6 @@
   background-image: url(SparkIMG/Spark\ 1.png);
 }
 
-
-
 #faq-container {
   background: white;
   border-radius: 8px;
@@ -64,14 +62,19 @@
   border-bottom: none;
 }
 
-
-
-
 @keyframes slideUpIn {
-  0%   { transform: translateY(100%); }
-  60%  { transform: translateY(-10%); }
-  80%  { transform: translateY(5%); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(100%);
+  }
+  60% {
+    transform: translateY(-10%);
+  }
+  80% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .word {
@@ -81,4 +84,3 @@
 .word.animate-in {
   animation: slideUpIn 0.5s forwards;
 }
-
