@@ -27,22 +27,23 @@
   </head>
   <body>
     <!-- Header Section: Logo and Navigation -->
+
     <header class="w-full h-[76px] shadow bg-white">
       <div
-        class="flex items-center justify-between px-10 h-full max-w-[1200px] mx-auto"
+        class="flex items-center justify-between px-4 sm:px-6 md:px-10 h-full max-w-[1200px] mx-auto"
       >
         <!-- Left: Logo -->
         <div class="flex-shrink-0">
           <img
             src="SparkIMG/Spark logo temp.png"
             alt="spark logo"
-            class="w-auto"
+            class="w-auto h-10"
           />
         </div>
 
-        <!-- Center: Nav Links -->
-        <nav class="flex-1">
-          <ul class="flex justify-center items-center gap-6">
+        <!-- Center: Nav Links (Desktop) -->
+        <nav class="hidden md:flex flex-1">
+          <ul class="flex justify-evenly items-center gap-6">
             <li>
               <a
                 href="index.html"
@@ -52,9 +53,7 @@
               >
             </li>
             <li>
-              <a
-                href="about-us.html"
-                class="hover:underline whitespace-nowrap"
+              <a href="about-us.html" class="hover:underline whitespace-nowrap"
                 >About us</a
               >
             </li>
@@ -64,27 +63,102 @@
           </ul>
         </nav>
 
-        <!-- Right: Auth -->
-        <ul class="flex items-center gap-2 flex-shrink-0">
-          <li>
-            <a href="#" class="text-purple-900 font-semibold whitespace-nowrap"
-              >Sign up</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              class="bg-purple-800 text-white font-semibold px-[56px] py-[10.5px] rounded-lg hover:bg-purple-700"
-              >Login</a
-            >
-          </li>
-        </ul>
+        <!-- Right: Auth (Desktop) -->
+        <div class="hidden md:flex items-center gap-2 flex-shrink-0">
+          <a href="#" class="text-purple-900 font-semibold whitespace-nowrap"
+            >Sign up</a
+          >
+          <a
+            href="#"
+            class="bg-purple-800 text-white font-semibold px-6 py-2 rounded-lg hover:bg-purple-700 ml-4"
+            >Login</a
+          >
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden flex flex-col justify-center items-center w-10 h-10 text-purple-900 focus:outline-none"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <span
+            id="menu-icon-top"
+            class="block w-6 h-0.5 bg-purple-900 mb-1.5 transition-transform"
+          ></span>
+          <span
+            id="menu-icon-middle"
+            class="block w-6 h-0.5 bg-purple-900 mb-1.5 opacity-100 transition-opacity"
+          ></span>
+          <span
+            id="menu-icon-bottom"
+            class="block w-6 h-0.5 bg-purple-900 transition-transform"
+          ></span>
+        </button>
       </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden fixed inset-0 z-50 bg-white pt-[76px] transform -translate-x-full transition-transform duration-300 ease-in-out"
+      >
+        <div class="flex flex-col h-full">
+          <nav class="flex-1 px-6 py-8">
+            <ul class="flex flex-col space-y-6">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-2xl text-purple-900 font-semibold hover:text-purple-700 block py-2"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about-us.html"
+                  class="text-2xl text-gray-800 hover:text-purple-700 block py-2"
+                  >About us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="support.html"
+                  class="text-2xl text-gray-800 hover:text-purple-700 block py-2"
+                  >Support</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <div class="px-6 py-8 border-t border-gray-200">
+            <div class="flex flex-col space-y-4">
+              <a
+                href="#"
+                class="text-xl text-purple-900 font-semibold text-center py-3 hover:text-purple-700"
+                >Sign up</a
+              >
+              <a
+                href="#"
+                class="bg-purple-800 text-white font-semibold text-xl py-3 rounded-lg hover:bg-purple-700 text-center"
+                >Login</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Overlay -->
+      <div
+        id="mobile-menu-overlay"
+        class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
+      ></div>
     </header>
 
     <!-- Main Hero Section: Intro, cool vibes, main text, soul mates, marquee -->
-    <div class="mt-[110px] flex ml-[60px] gap-6">
-      <main class="flex-[2]">
+    <div
+      class="mt-10 lg:mt-[110px] flex flex-col lg:flex-row mx-auto lg:ml-[60px] gap-6 max-w-[1200px]"
+    >
+      <main class="w-full lg:flex-[2] w-fit px-4 lg:px-0">
         <!-- cool vibes-->
         <div class="relative inline-block">
           <span
@@ -116,7 +190,7 @@
         </p>
 
         <!-- soul mates -->
-        <div class="relative inline-block ml-[300px] mt-3">
+        <div class="relative inline-block ml-[350px] mt-5 lg:ml-[300px] lg:mt-3">
           <span
             class="inline-block bg-yellow-600 text-white py-1 px-3 relative rounded-lg transform rotate-6 origin-bottom skew-x-5 shadow-md font-medium text-sm"
             >Soul mates</span
@@ -128,7 +202,7 @@
           />
         </div>
 
-        <div class="relative inline-block ml-6 xl:block w-fit mt-3">
+        <div class="relative inline-block lg:ml-6 xl:block w-fit mt-3">
           <span class="bg-[#69306D] py-2 px-2 text-white relative rounded-lg"
             >Find your Match
           </span>
@@ -140,32 +214,34 @@
         </div>
       </main>
 
-      <div class="flex-[3] flex overflow-hidden relative h-[520px]">
+      <div
+        class="w-full lg:flex-[3] flex overflow-hidden relative h-[220px] md:h-[350px] lg:h-[520px] mt-6 lg:mt-0"
+      >
         <div
           id="marquee-content"
-          class="flex gap-2 animate-scrolling absolute left-0 top-0 w-max"
+          class="flex gap-4 lg:gap-2 animate-scrolling absolute left-0 top-0 w-max"
         >
           <img
             src="SparkIMG/Frame 10.png"
             alt=""
-            class="h-[420px] w-[250px] object-cove rounded-lg"
+            class="h-[250px] md:h-[350px] lg:h-[420px] w-[150px] md:w-[200px] lg:w-[250px] object-cover rounded-lg"
           />
           <div class="flex flex-col gap-1">
             <img
               src="SparkIMG/Rectangle 4.png"
               alt=""
-              class="h-[100px] w-[270px]"
+              class="h-[80px] md:h-[100px] w-[150px] md:w-[270px] object-cover"
             />
             <img
               src="SparkIMG/Rectangle 2.png"
               alt=""
-              class="h-[317px] w-[270px]"
+              class="h-[170px] md:h-[250px] lg:h-[317px] w-[150px] md:w-[270px] object-cover"
             />
           </div>
           <img
             src="SparkIMG/Rectangle 3.png"
             alt=""
-            class="h-[420px] w-[250px] object-cover rounded-lg"
+            class="h-[250px] md:h-[350px] lg:h-[420px] w-[150px] md:w-[200px] lg:w-[250px] object-cover rounded-lg"
           />
           <!-- Add more unique images as needed -->
         </div>
@@ -371,7 +447,9 @@
               <li class="mt-3">Safety prompts and basic filters</li>
               <li class="mt-3">Smart matching based on vibe and intent</li>
             </ul>
-            <div class="mt-10 text-center bg-purple-800 p-2 rounded-md hover:bg-[#520C61]">
+            <div
+              class="mt-10 text-center bg-purple-800 p-2 rounded-md hover:bg-[#520C61]"
+            >
               <button class="text-white">Get started</button>
             </div>
           </div>
@@ -393,7 +471,9 @@
               <li class="mt-3">Access to those that liked you</li>
               <li class="mt-3">Daily profile boosts</li>
             </ul>
-            <div class="mt-10 text-center bg-white p-2 rounded-md hover:bg-[#520C61] hover:text-white">
+            <div
+              class="mt-10 text-center bg-white p-2 rounded-md hover:bg-[#520C61] hover:text-white"
+            >
               <button class="text-purple-900">Get started</button>
             </div>
           </div>
@@ -413,7 +493,9 @@
               <li class="mt-3">5 super likes daily</li>
               <li class="mt-3">See who likes you</li>
             </ul>
-            <div class="mt-10 text-center bg-purple-800 p-2 rounded-md hover:bg-[#520C61]">
+            <div
+              class="mt-10 text-center bg-purple-800 p-2 rounded-md hover:bg-[#520C61]"
+            >
               <button class="text-white">Get started</button>
             </div>
           </div>

@@ -100,3 +100,56 @@ function renderFaqs() {
 }
 
 renderFaqs();
+
+ document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('mobile-menu-overlay');
+    const menuIconTop = document.getElementById('menu-icon-top');
+    const menuIconMiddle = document.getElementById('menu-icon-middle');
+    const menuIconBottom = document.getElementById('menu-icon-bottom');
+    
+    function toggleMenu() {
+      const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+      
+      // Toggle menu visibility
+      menuButton.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('-translate-x-full');
+      overlay.classList.toggle('hidden');
+      
+      // Toggle hamburger to X animation
+      if (!isExpanded) {
+        // Open animation
+        menuIconTop.style.transform = 'rotate(45deg) translate(5px, 6px)';
+        menuIconMiddle.style.opacity = '0';
+        menuIconBottom.style.transform = 'rotate(-45deg) translate(5px, -6px)';
+      } else {
+        // Close animation
+        menuIconTop.style.transform = 'none';
+        menuIconMiddle.style.opacity = '1';
+        menuIconBottom.style.transform = 'none';
+      }
+      
+      // Prevent body scrolling when menu is open
+      document.body.style.overflow = !isExpanded ? 'hidden' : '';
+    }
+    
+    // Menu button click
+    menuButton.addEventListener('click', toggleMenu);
+    
+    // Overlay click to close
+    overlay.addEventListener('click', toggleMenu);
+    
+    // Close menu when clicking on links (optional)
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', toggleMenu);
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+        toggleMenu();
+      }
+    });
+  });
