@@ -152,40 +152,45 @@
     </header>
 
     <section>
-      <div class="flex mt-20 justify-center gap-12">
-        <div class="relative">
+      <div class="flex flex-col lg:flex-row lg:mt-20 justify-center gap-12">
+        <!-- Image container -->
+        <div class="relative order-2 lg:order-1">
           <img src="SparkIMG/Rectangle 18.png" alt="" class="block" />
 
           <img
             src="SparkIMG/Spark 2.png"
             alt=""
-            class="absolute -top-9 -left-10 animate-[float_3s_ease-in-out_infinite]"
+            class="absolute -top-9 -left-10 animate-[float_3s_ease-in-out_infinite] hidden lg:flex"
           />
 
           <img
             src="SparkIMG/Spark 2.png"
             alt=""
-            class="absolute -bottom-9 -right-12 animate-[float_3s_ease-in-out_infinite]"
+            class="absolute -bottom-9 -right-12 animate-[float_3s_ease-in-out_infinite] hidden lg:flex"
           />
         </div>
-        <div class="mt-7">
-          <h1 class="text-4xl font-semibold">
-            Love Deserves Better. <br />
+
+        <!-- Text container -->
+        <div class="mt-7 order-1 lg:order-2">
+          <h1 class="text-4xl font-semibold text-center lg:text-left">
+            <span>Love Deserves Better.</span> <br />
             Thats Why We Built Spark.
           </h1>
-          <p class="mt-10 font-light">
+
+          <p class="hidden lg:flex mt-4 lg:mt-10 font-light">
             Spark was created for people who are tired of shallow swipes,
-            dead-end chats, <br />and dating apps that dont feel made for them.
-            We believe real connection <br />
-            comes from feeling seen, heard, and safe-from being able to show up
+            dead-end chats, <br />
+            and dating apps that dont feel made for them. We believe real
+            connection <br />
+            comes from feeling seen, heard, and safe—from being able to show up
             exactly <br />
             as you are.
           </p>
 
-          <p class="font-light">
+          <p class="hidden lg:flex font-light">
             Whether youre seeking love, companionship, or something beautifully
             <br />
-            unexpexted, Spark helps you find it through matching, respectful
+            unexpected, Spark helps you find it through matching, respectful
             <br />
             conversation, and a space that feels inclusive and emotionally
             intelligent.
@@ -200,7 +205,7 @@
           What Makes Spark Different
         </h1>
 
-        <div class="flex mt-10 justify-center gap-5">
+        <div class="flex flex-col items-center lg:flex-row lg:justify-center mt-10  gap-5">
           <div>
             <img src="SparkIMG/Rectangle 21.png" alt="" />
             <p class="mt-3 font-semibold">
@@ -239,9 +244,9 @@
     </section>
 
     <section class="mt-10">
-      <div class="flex justify-center gap-10">
+      <div class="flex flex-col items-center lg:flex-row lg:justify-center gap-10">
         <div class="mt-10">
-          <h1 class="text-2xl font-bold mb-4">
+          <h1 class="text-2xl font-bold mb-4 text-center">
             Built By Real People, For Real People
           </h1>
           <p class="text-gray-700 leading-relaxed">
@@ -311,5 +316,7 @@
         <span>&copy; SPARK All rights reserved</span>
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

@@ -48,50 +48,55 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Duplicate marquee content for seamless loop
 document.addEventListener("DOMContentLoaded", function () {
-  const marquee = document.getElementById("marquee-content");
-  marquee.innerHTML += marquee.innerHTML;
+  const span = document.getElementById("changing-span");
+  if (span) {
+    const words = ["Warm", "Real", "Safe"];
+    let i = 0;
+    setInterval(() => {
+      span.textContent = words[i % words.length];
+      span.classList.remove("animate-in");
+      void span.offsetWidth;
+      span.classList.add("animate-in");
+      i++;
+    }, 3000);
+  }
+
+  if (marquee) {
+    marquee.innerHTML += marquee.innerHTML;
+  }
 });
 
-let pos = 0;
-function animateMarquee() {
-  pos -= 1;
-  if (Math.abs(pos) >= marquee.scrollWidth / 2) {
-    pos = 0;
+// Marquee animation only if element exists
+if (marquee) {
+  let pos = 0;
+  function animateMarquee() {
+    pos -= 1;
+    if (Math.abs(pos) >= marquee.scrollWidth / 2) pos = 0;
+    marquee.style.transform = `translateX(${pos}px)`;
+    requestAnimationFrame(animateMarquee);
   }
-  marquee.style.transform = `translateX(${pos}px)`;
-  requestAnimationFrame(animateMarquee);
+  animateMarquee();
 }
-// Duplicate content for seamless loop
-marquee.innerHTML += marquee.innerHTML;
-animateMarquee();
 
+// FAQ rendering only if container exists
 function renderFaqs() {
+  if (!faqContainer) return;
   faqContainer.innerHTML = "";
-
   faqs.forEach((faq, index) => {
-    // Create question container
     const questionDiv = document.createElement("div");
     questionDiv.classList.add("faq-question");
     questionDiv.textContent = faq.question;
-
-    // Arrow icon
     const arrow = document.createElement("span");
     arrow.classList.add("arrow");
     arrow.textContent = "▼";
     if (faq.isOpen) arrow.classList.add("open");
     questionDiv.appendChild(arrow);
-
-    // Create answer div
     const answerDiv = document.createElement("div");
     answerDiv.classList.add("faq-answer");
     if (faq.isOpen) answerDiv.classList.add("open");
     answerDiv.textContent = faq.answer;
-
-    // Append question and answer to container
     faqContainer.appendChild(questionDiv);
     faqContainer.appendChild(answerDiv);
-
-    // Add click event to toggle
     questionDiv.addEventListener("click", () => {
       faqs[index].isOpen = !faqs[index].isOpen;
       renderFaqs();
@@ -99,7 +104,7 @@ function renderFaqs() {
   });
 }
 
-renderFaqs();
+if (faqContainer) renderFaqs();
 
  document.addEventListener('DOMContentLoaded', function() {
     const menuButton = document.getElementById('mobile-menu-button');
