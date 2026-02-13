@@ -27,7 +27,7 @@
     <!-- Header Section: Logo and Navigation -->
     <header class="w-full h-[76px] shadow bg-white">
       <div
-        class="flex items-center justify-between px-4 sm:px-6 md:px-10 h-full max-w-[1200px] mx-auto"
+        class="flex items-center justify-between px-4 sm:px-6 md:px-10 h-full max-w-[1200px] mx-auto relative"
       >
         <!-- Left: Logo -->
         <div class="flex-shrink-0">
@@ -39,8 +39,10 @@
         </div>
 
         <!-- Center: Nav Links (Desktop) -->
-        <nav class="hidden md:flex flex-1">
-          <ul class="flex justify-evenly items-center gap-6">
+        <nav
+          class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 inset-y-0 items-center"
+        >
+          <ul class="flex justify-center items-center gap-6">
             <li>
               <a
                 href="index.html"
@@ -106,14 +108,14 @@
               <li>
                 <a
                   href="index.html"
-                  class="text-xl text-purple-900 font-semibold hover:text-purple-700 block py-2"
+                  class="text-xl text-purple-800 hover:text-purple-700 block py-2"
                   >Home</a
                 >
               </li>
               <li>
                 <a
                   href="about-us.html"
-                  class="text-xl text-gray-800 hover:text-purple-700 block py-2"
+                  class="text-xl text-purple-900 font-semibold hover:text-purple-700 block py-2"
                   >About us</a
                 >
               </li>
