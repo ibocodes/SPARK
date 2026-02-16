@@ -78,64 +78,66 @@
           ></span>
         </button>
       </div>
+    </header>
 
-      <!-- Mobile Menu -->
-      <div
-        id="mobile-menu"
-        class="md:hidden fixed inset-0 z-50 bg-white pt-[76px] transform -translate-x-full transition-transform duration-300 ease-in-out"
-      >
-        <div class="flex flex-col h-full">
-          <nav class="flex-1 px-6 py-8">
-            <ul class="flex flex-col">
-              <li>
-                <a
-                  href="index.html"
-                  class="text-xl text-purple-800 hover:text-purple-700 block py-2"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="about-us.html"
-                  class="text-xl text-purple-900 font-semibold hover:text-purple-700 block py-2"
-                  >About us</a
-                >
-              </li>
-              <li>
-                <a
-                  href="support.html"
-                  class="text-xl text-gray-800 hover:text-purple-700 block py-2"
-                  >Support</a
-                >
-              </li>
-            </ul>
-          </nav>
 
-          <div class="px-6 py-8 border-t border-gray-200">
-            <div class="flex flex-col space-y-4">
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="md:hidden fixed top-0 left-0 h-full w-[80%] z-50 bg-white pt-[76px] transform -translate-x-full transition-transform duration-300 ease-in-out"
+    >
+      <div class="flex flex-col h-full">
+        <nav class="flex-1 px-6 py-8">
+          <ul class="flex flex-col">
+            <li>
               <a
-                href="#"
-                class="text-xl text-purple-900 font-semibold text-center py-3 hover:text-purple-700"
-                >Sign up</a
+                href="index.html"
+                class="text-xl text-purple-800 hover:text-purple-700 block py-2"
+                >Home</a
               >
+            </li>
+            <li>
               <a
-                href="#"
-                class="bg-purple-800 text-white font-semibold text-xl py-3 rounded-lg hover:bg-purple-700 text-center"
-                >Login</a
+                href="about-us.html"
+                class="text-xl text-purple-900 font-semibold hover:text-purple-700 block py-2"
+                >About us</a
               >
-            </div>
+            </li>
+            <li>
+              <a
+                href="support.html"
+                class="text-xl text-gray-800 hover:text-purple-700 block py-2"
+                >Support</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="px-6 py-8 border-t border-gray-200">
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#"
+              class="text-xl text-purple-900 font-semibold text-center py-3 hover:text-purple-700"
+              >Sign up</a
+            >
+            <a
+              href="#"
+              class="bg-purple-800 text-white font-semibold text-xl py-3 rounded-lg hover:bg-purple-700 text-center"
+              >Login</a
+            >
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Mobile Menu Overlay -->
-      <div
-        id="mobile-menu-overlay"
-        class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
-      ></div>
-    </header>
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobile-menu-overlay"
+      class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40 hidden"
+    ></div>
 
-    <section class="mt-12 lg:mt-28">
+
+    <section class="mt-12 md:mt-16 lg:mt-28">
       <div
         class="flex flex-col lg:flex-row max-w-[1200px] mx-auto lg:mt-32 lg:gap-10 items-center"
       >
@@ -171,7 +173,7 @@
           </div>
         </div>
 
-        <div class="text-xl shadow-xl w-full max-w-[500px] p-10 ">
+        <div class="text-xl shadow-xl w-full max-w-[500px] p-10">
           <form action="">
             <label for="" class="text-xl">First name</label><br />
             <input
@@ -215,11 +217,11 @@
 
     <!-- Footer Section: Links, policies, copyright -->
     <footer class="bg-purple-800 p-10">
-      <div class="hidden lg:flex">
+      <div class="flex flex-col md:flex-row justify-between items-start w-full max-w-6xl mx-auto gap-8 md:gap-10 text-white">
         <div
-          class="flex justify-between items-start w-full max-w-6xl mx-auto gap-10 text-white"
+          class="flex justify-center md:justify-between items-start gap-10 text-white w-full"
         >
-          <aside class="flex-[2] w-22">
+          <aside class="flex-[2] w-22 hidden md:block">
             <img
               src="SparkIMG/Spark logo temp.png"
               alt=""
@@ -227,7 +229,7 @@
             />
           </aside>
 
-          <div class="flex flex-[3] gap-5 ml-50">
+          <div class="flex flex-[3] gap-5 mx-auto md:mx-0">
             <div>
               <ul>
                 <li class="font-semibold">Pages</li>
