@@ -255,7 +255,7 @@
     </div>
 
     <!-- Features Section: App features and highlights -->
-    <section class="flex flex-wrap mt-10 items-center ml-7 p-4">
+    <section class="flex flex-wrap mt-10 items-center p-4">
       <div class="w-full flex justify-center items-center">
         <img src="SparkIMG/tab2.png" alt="" />
       </div>
@@ -265,11 +265,11 @@
         <img src="SparkIMG/Frame 15.png" alt="" class="" />
       </div>
 
-      <div class="w-full mt-7">
-        <p class="text-center text-2xl font-normal">
+      <div class="w-full mt-7 px-4 lg:px-0">
+        <p class="text-center text-base sm:text-xl lg:text-2xl font-normal">
           Spark Is Your All In One Dating App With Smart Matching, Real Time
-          Safety, And A <br />Sleek Inclusive Design That Makes Connecting Feel
-          Effortless.
+          Safety, And A <br class="hidden lg:block" />Sleek Inclusive Design
+          That Makes Connecting Feel Effortless.
         </p>
       </div>
 
@@ -284,65 +284,68 @@
     </section>
 
     <!-- Connection Section: Everything you need to connect -->
-    <section class="section3 mt-10 w-full pt-7">
+    <section class="section3 mt-10 w-full pt-7 px-4">
       <h2
         class="font-semibold text-center lg:text-left text-2xl max-w-[1200px] mx-auto"
       >
         Everything You Need <br />
         To Connect
       </h2>
-
-      <p class="mt-4 font-xs text-center lg:text-left max-w-[1200px] mx-auto">
+      <p class="mt-4 text-xs text-center lg:text-left max-w-[1200px] mx-auto">
         Thoughtful Matches, Meaningful Chats, And A Space That Feels <br />Just
         Right-For The Kind Of Connection That Lasts.
       </p>
-
       <div
-        class="mt-5 flex items-center flex-col lg:flex-row gap-2 max-w-[1200px] mx-auto"
+        class="mt-5 flex items-center flex-col lg:flex-row gap-6 lg:gap-2 max-w-[1200px] mx-auto"
       >
-        <div>
+        <div class="w-full flex flex-col items-center lg:w-auto lg:block">
           <img
             src="SparkIMG/Rectangle 2 (1).png"
             alt=""
-            class="w-[90%] mx-auto h-auto object-cover lg:w-[300px] lg:h-[205px] rounded"
+            class="w-[90%] h-[220px] mx-auto object-cover rounded lg:w-[300px] lg:h-[205px]"
           />
-          <p class="mt-2 font-xs text-sm">
+          <p class="mt-2 text-sm text-center lg:text-left">
             Enjoy high-resolution video calls that make every moment feel face
             to face
           </p>
         </div>
-        <div>
+
+        <div class="w-full flex flex-col items-center lg:w-auto lg:block">
           <img
             src="SparkIMG/Rectangle 5.png"
             alt=""
-            class="w-[90%] mx-auto h-auto object-cover rounded"
+            class="w-[90%] h-[220px] mx-auto object-cover rounded lg:w-[300px] lg:h-[205px]"
           />
-          <p class="mt-2 font-xs text-sm">
+          <p class="mt-2 text-sm text-center lg:text-left">
             Experience crystal clear imagery that captures every smile
           </p>
         </div>
-        <div>
+
+        <div class="w-full flex flex-col items-center lg:w-auto lg:block">
           <img
             src="SparkIMG/Rectangle 6.png"
             alt=""
-            class="w-[90%] mx-auto h-auto object-cover rounded"
+            class="w-[90%] h-[220px] mx-auto object-cover rounded lg:w-[300px] lg:h-[205px]"
           />
-          <p class="mt-2 font-xs text-sm">
+          <p class="mt-2 text-sm text-center lg:text-left">
             Stay connected, no missed chances, just real moments
           </p>
         </div>
-        <div class="relative inline-block xl:block w-fit">
-          <img
-            src="SparkIMG/Rectangle 7.png"
-            alt=""
-            class="w-[90%] mx-auto h-auto object-cover rounded"
-          />
-          <img
-            src="SparkIMG/Spark 2.png"
-            alt=""
-            class="absolute bottom-12 -right-3 animate-[float_3s_ease-in-out_infinite]"
-          />
-          <p class="mt-2 font-xs text-sm">
+
+        <div class="w-full flex flex-col items-center lg:w-auto lg:block">
+          <div class="relative w-[90%] lg:w-[300px]">
+            <img
+              src="SparkIMG/Rectangle 7.png"
+              alt=""
+              class="w-full h-[220px] mx-auto object-cover rounded lg:h-[205px]"
+            />
+            <img
+              src="SparkIMG/Spark 2.png"
+              alt=""
+              class="absolute bottom-12 right-6 w-14 h-14 animate-[float_3s_ease-in-out_infinite]"
+            />
+          </div>
+          <p class="mt-2 text-sm text-center lg:text-left">
             Take your love global with a first-class visa pathway to Canada.
           </p>
         </div>
@@ -350,70 +353,94 @@
     </section>
 
     <!-- Safety Section: Safety features and info -->
-    <section class="mt-10 lg:mt-20 w-auto">
-      <h3 class="text-center font-semibold text-2xl lg:text-4xl">
-        Safety First-Without The Vibe Kill
-      </h3>
-      <div
-        class="mt-10 flex items-center flex-col lg:flex-row gap-9 max-w-[1200px] mx-auto"
+<section class="mt-10 lg:mt-20 w-full">
+  <h3 class="text-center font-semibold text-2xl lg:text-4xl px-4">
+    Safety First—Without The Vibe Kill
+  </h3>
+
+  <div
+    class="mt-10 flex flex-col lg:flex-row items-center lg:items-start gap-9 max-w-[1200px] mx-auto px-4"
+  >
+    <!-- Safety Image -->
+    <div class="w-full lg:w-1/2">
+      <img
+        src="SparkIMG/Rectangle 8.png"
+        alt="Safety features"
+        class="w-full max-w-[500px] mx-auto h-auto object-cover rounded"
+      />
+    </div>
+
+    <!-- Safety Content -->
+    <div class="w-full lg:w-1/2">
+      <h4
+        class="text-xl font-semibold mt-2 text-center lg:text-left leading-snug"
       >
-        <div>
-          <img
-            src="SparkIMG/Rectangle 8.png"
-            alt=""
-            class="w-[90%] mx-auto h-auto object-cover rounded"
-          />
-        </div>
-        <div class="">
-          <h4 class="text-xl font-semibold mt-2 text-center lg:text-left">
-            You Shouldnt Have To Pick Between <br />Saftey And A Good Time
-          </h4>
-          <p class="text-sm hidden lg:flex mt-5">
-            Our Tools Work Quitely Behind The Scenes-So You Can Focus On <br />
-            Connection, Not Caution.
-          </p>
+        You Shouldn't Have To Pick Between
+        <br class="hidden lg:block" />
+        Safety And A Good Time
+      </h4>
 
-          <div
-            class="flex justify-center items-center lg:justify-start lg:items-start gap-2 mt-10"
-          >
-            <img src="SparkIMG/search_3281188 1.png" alt="" /><span
-              class="mt-3"
-            >
-              Profile Verification: No Bots. No Weird Vibes.
-            </span>
-          </div>
+      <p class="text-sm mt-5 text-center lg:text-left">
+        Our Tools Work Quietly Behind The Scenes—So You Can Focus On
+        <br class="hidden lg:block" />
+        Connection, Not Caution.
+      </p>
 
-          <div
-            class="flex justify-center items-start lg:justify-start gap-2 mt-7"
-          >
-            <img src="SparkIMG/search_3281188 1 (1).png" alt="" /><span
-              class="mt-3"
-            >
-              Photo Reveal: See Who You Are Chatting With.
-            </span>
-          </div>
+      <!-- Feature 1 -->
+      <div class="flex items-start gap-3 mt-8">
+        <img
+          src="SparkIMG/search_3281188 1.png"
+          alt="Profile verification"
+          class="w-8 h-8 object-contain flex-shrink-0"
+        />
 
-          <div
-            class="flex justify-center items-start lg:justify-start gap-2 mt-7"
-          >
-            <img src="SparkIMG/search_3281188 1 (2).png" alt="" /><span
-              class="mt-3"
-            >
-              On-Chat Safety Prompts: Real-Time Checks For Tone, Respect, And
-              Consent.
-            </span>
-          </div>
-          <div
-            class="flex justify-center items-start lg:justify-start gap-2 mt-7"
-          >
-            <img src="SparkIMG/search_3281188 1 (3).png" alt="" />
-            <span class=""
-              >SafeExit Tap: Discreet Exit Option In Awkward Moments.</span
-            >
-          </div>
-        </div>
+        <span class="flex-1 text-sm lg:text-base">
+          Profile Verification: No Bots. No Weird Vibes.
+        </span>
       </div>
-    </section>
+
+      <!-- Feature 2 -->
+      <div class="flex items-start gap-3 mt-7">
+        <img
+          src="SparkIMG/search_3281188 1 (1).png"
+          alt="Photo reveal"
+          class="w-8 h-8 object-contain flex-shrink-0"
+        />
+
+        <span class="flex-1 text-sm lg:text-base">
+          Photo Reveal: See Who You Are Chatting With.
+        </span>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="flex items-start gap-3 mt-7">
+        <img
+          src="SparkIMG/search_3281188 1 (2).png"
+          alt="On-chat safety prompts"
+          class="w-8 h-8 object-contain flex-shrink-0"
+        />
+
+        <span class="flex-1 text-sm lg:text-base">
+          On-Chat Safety Prompts: Real-Time Checks For Tone, Respect, And
+          Consent.
+        </span>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="flex items-start gap-3 mt-7">
+        <img
+          src="SparkIMG/search_3281188 1 (3).png"
+          alt="Safe exit"
+          class="w-8 h-8 object-contain flex-shrink-0"
+        />
+
+        <span class="flex-1 text-sm lg:text-base">
+          SafeExit Tap: Discreet Exit Option In Awkward Moments.
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Testimonial Section: Real stories from users -->
     <section class="mt-20 ml-20 hidden lg:flex">
